@@ -1,8 +1,13 @@
 version: '3'
+networks: 
+    web:
 services: 
     web:
         image: node:12.18.3
         volumes: 
             - ./web:/web
         ports: 
-            - 3000:3000
+            - 3001:3000
+        command: bash -c "cd /web"
+        networks: 
+            - web
