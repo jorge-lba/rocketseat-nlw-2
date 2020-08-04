@@ -3,11 +3,11 @@ networks:
     web:
 services: 
     web:
-        image: node:12.18.3
+        image: jorgelba/reactjs:1.0.0
         volumes: 
-            - ./web:/home/web
+            - ./web:/web
         ports: 
-            - 3001:3000
-        command: bash -c "cd /home/web"
+            - 3000:3000
         networks: 
             - web
+        stdin_open: true
