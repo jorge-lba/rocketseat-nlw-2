@@ -5,9 +5,9 @@ services:
     web:
         image: node:12.18.3
         volumes: 
-            - ./web:/web
+            - ./web:/home/web
         ports: 
             - 3001:3000
-        command: bash -c "cd /web"
+        command: bash -c "cd /home/web"
         networks: 
             - web
